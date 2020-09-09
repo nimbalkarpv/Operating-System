@@ -1,0 +1,324 @@
+Pratik Nimbalkar_JH 200240520074
+
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname 
+    h) seq i) clear
+
+
+---->>----------DATE--------------------------------
+
+
+pratik@DESKTOP-63RAC0E:~$ date  =>day date time will be shown
+Mon Sep  7 20:40:35 IST 2020
+pratik@DESKTOP-63RAC0E:~$ date +%a  =>short name of day will be shown only
+Mon
+pratik@DESKTOP-63RAC0E:~$ date +%A   =>full name of day will be shown only
+Monday
+pratik@DESKTOP-63RAC0E:~$ date +%b   =>short name of month will be shown only
+Sep
+pratik@DESKTOP-63RAC0E:~$ date +%B    =>full name of month will be shown only
+September
+pratik@DESKTOP-63RAC0E:~$ date +%c
+Mon Sep  7 20:41:37 2020
+pratik@DESKTOP-63RAC0E:~$ date +%C
+20
+pratik@DESKTOP-63RAC0E:~$ date +%d    =>short date will be shown only
+07
+pratik@DESKTOP-63RAC0E:~$ date +%D    =>full date format will be shown with forward slashes
+09/07/20
+pratik@DESKTOP-63RAC0E:~$ date +%f
+%f
+pratik@DESKTOP-63RAC0E:~$ date +%F     =>full date format will be shown with hi-fens only
+2020-09-07
+pratik@DESKTOP-63RAC0E:~$ date +%T     =>time will be shown only
+20:43:07
+pratik@DESKTOP-63RAC0E:~$ date +%B' '%d' '%Y
+September 07 2020
+-------------------------------------------------------------  
+-------------------calendar-------------------
+
+pratik@DESKTOP-63RAC0E:~$ cal    =>show calendar
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+
+pratik@DESKTOP-63RAC0E:~$ cal 2022    =>2022 show calender
+                            2022
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1         1  2  3  4  5         1  2  3  4  5
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   6  7  8  9 10 11 12
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  13 14 15 16 17 18 19
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  20 21 22 23 24 25 26
+23 24 25 26 27 28 29  27 28                 27 28 29 30 31
+30 31
+
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                1  2   1  2  3  4  5  6  7            1  2  3  4
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30
+
+
+        July                 August              September
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                1  2      1  2  3  4  5  6               1  2  3
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30
+31
+
+      October               November              December
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1         1  2  3  4  5               1  2  3
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31
+30 31
+
+
+
+pratik@DESKTOP-63RAC0E:~$ cal -m1 2020    =>first month of 2020
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+pratik@DESKTOP-63RAC0E:~$ cal -m2 2020   => second month of 2020
+   February 2020
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+
+pratik@DESKTOP-63RAC0E:~$ cal -m12 2020    =>12 th month of2022
+   December 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+
+
+-------------------------------------------------------------------
+-----------------------bc-------------------
+
+
+bc => is basic calculator in linux. after typing this command one can do basic calculator operations
+
+
+-----------------------------------------------------------------------------------------------
+
+echo => echo command in linux is used to display line of text/string that are passed as an argument .
+1. \b  : it removes all the spaces in between the text
+2. \c : suppress trailing new line with backspace interpreter
+3. \n : this option creates new line from where it is used.
+4. \t : this option is used to create horizontal tab spaces.
+5. \r : carriage return with backspace interpreter ‘-e‘ to have specified carriage return in output.
+6. \v : this option is used to create vertical tab spaces.
+7. \a : alert return with backspace interpreter ‘-e‘ to have sound alert.
+8. echo * : this command will print all files/folders, similar to ls command .
+9. -n : this option is used to omit echoing trailing newline .
+
+
+---------------------------------------------------------------------------------------------------------
+
+who =>  The who command is used to get information about currently logged in user on to system
+
+------------------------------------------------------------------------------------------------
+
+logname => print user´s login name,Print the name of the current user
+
+-------------------------------------------------------------------------------------------------------
+
+uname => uname is a command-line utility that prints basic information about the operating system name and system hardware
+
+
+------------------------------------------------------------------------------------------------------------------
+
+1.9. seq => seq command in Linux is used to generate numbers from FIRST to LAST in steps of INCREMENT. It is a very useful command where we had to generate list of numbers in while, for, until loop.
+
+1. seq LAST : When only one argument is given then it produces numbers from 1 to LAST in step increment of 1. If the LAST is less than 1, then is produces no output.
+2. seq FIRST LAST : When two arguments are given then it produces numbers from FIRST till LAST is step increment of 1. If LAST is less than FIRST, then it produces no output
+3. seq FIRST INCREMENT LAST : When three arguments are given then it produces numbers from FIRST till LAST in step of INCREMENT. If LAST is less than FIRST, then it produces no output.
+4. seq -f “FORMAT” FIRST INCREMENT LAST : This command is used to generate sequence in a formatted manner. FIRST and INCREMENT are optional.
+5. seq -s “STRING” FIRST INCREMENT LAST : This command is uses to STRING to separate numbers. By default this value is equal to "\n". FIRST and INCREMENT are optional.
+6. seq -w FIRST INCREMENT LAST : This command is used to equalise width by padding with leading zeroes. FIRST and INCREMENT are optional.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+clear => clear screen.
+
+----------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+
+
+---->>>>mkdir a b c   -------make a directory
+        touch a.txt     -----make file inside the directory
+        touch b.txt
+        touch c.txt
+        cd -          ------this command for go to back directory or file
+
+        cp -r c CDAC   ------copy c directory into CDAC
+
+        mv   a CDAC-------------Change Directory name a to cdac.
+
+----------------------------------------------------------------------------------------------
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+
+--->>> grep am file1.txt file2.txt file3.txt file4.txt file5.txt---searching same text in multiplefile
+
+     touch file.txt
+      nano file.txt
+
+        ~$ cat file.txt
+        i am nano terminal editor
+
+       touch file1.txt file2.txt file3.txt file4.txt file5.txt
+
+       rmdir a
+       rmdir b
+       rmdir  c
+
+-----------------------------------------------------------------------------------------------
+
+
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+->>>>
+
+      vi file6.txt
+      a)cat file6.txt
+      b)~$ cat -n file6.txt
+      c)~$ tac file6.txt
+      d)~$ cat file1.txt file2.txt file3.txt file6.txt
+
+
+
+----------------------------------------------------------------------------------------------------------
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+
+
+
+-->>>
+     a)cat file6.txt,column file6.txt--------column filename.txt
+    
+     b) sort file1.txt,   sort -r file1.txt
+
+     c) ls -a
+
+     d)d)touch -a file1.txt file2.txt
+         ls -t 
+         ls -rt
+    e)ls -r
+    f)ls -l
+    g)ls -ld
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*************************************************************************************************************************
+
+1) mkdir pratik
+   touch a.txt b.txt c.txt d.sh
+    chmod u-rwx pratik
+a) chmod u+rw- a.txt b.txt
+b) chmod +r-- c.txt
+c) chmod +x pratik
+
+
+
+2)chmod +x pratik
+3)chmod -wx pratik	
+4)echo * pratik	
+5)echo * /etc/
+6)find /etc -type f -name "*.conf"
+7)echo 'helloo' >> a.txt
+
+
+1)
+
+mkdir a
+cd a
+touch a.txt 
+touch .hidden.txt
+a.
+mkdir b
+cd b
+touch b.txt 
+touch .hidden1.txt
+b.mkdir c
+touch c.txt 
+touch .hidden2.txt
+c. cp -r  c a
+d.cp -r a/a.txt a/b
+ cp -r a/c/ a/b
+
+2)
+chmod a=r c
+
+3)permission denied
+4)mkdir data
+5) chmod +rw b
+6)mkdir data2
+7)touch data.txt
+8)mv c copied_dir
+9)chmod +x copied_dir
+10)ls
+11)permission denied for hidden file,c.txt file
+12)mv a/b/data/ a
+13)sudo chmod
+14)chmod o+rwx a
+15)mkdir sample
+16)mkdir x
+17)mv  x a
+18)mkdir movies
+21)chmod a=rwx a
+25)rm b.txt
+
+
+
+
+
+
+
+
