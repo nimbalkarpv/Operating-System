@@ -260,19 +260,39 @@ Q5. Create Random some files and sub directories.
 
 1) mkdir pratik
    touch a.txt b.txt c.txt d.sh
-    chmod u-rwx pratik
-a) chmod u+rw- a.txt b.txt
-b) chmod +r-- c.txt
-c) chmod +x pratik
+    chmod 700 pratik
+a) chmod 600 a.txt b.txt
+b) chmod 600 c.txt
+c) chmod 100 d.sh
 
 
 
-2)chmod +x pratik
-3)chmod -wx pratik	
-4)echo * pratik	
-5)echo * /etc/
+2)Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+->	chmod 100 pratik
+
+3)Change the permission of the previous directory to read only.
+	Analyze the output.
+
+->	chmod 400 pratik
+
+	
+4)Use echo to list the all files of your home directory.
+
+
+->echo * 
+
+	
+5)Use echo to list the all files of /etc/ directory
+
+->echo * /etc/
+
+
 6)find /etc -type f -name "*.conf"
-7)echo 'helloo' >> a.txt
+7)Use echo to append your name to a.txt
+
+->echo 'helloo' >> a.txt
 
 
 1)
@@ -293,27 +313,128 @@ c. cp -r  c a
 d.cp -r a/a.txt a/b
  cp -r a/c/ a/b
 
-2)
-chmod a=r c
+2)Change the third level directory c permission to read only
 
-3)permission denied
-4)mkdir data
-5) chmod +rw b
-6)mkdir data2
-7)touch data.txt
-8)mv c copied_dir
-9)chmod +x copied_dir
-10)ls
+->	chmod 444 c
+
+
+3)Try copying third level c directory to outside of a
+
+->cp -r a/b/c a
+		output=> cp: cannot stat 'a/b/c/f3.txt': Permission denied
+			 cp: cannot stat 'a/b/c/.c.txt': Permission denied
+			 cp: cannot stat 'a/b/c/f1.txt': Permission denied
+	"PERMISSION DENIED!!"
+
+
+4) Create the directory  “data“ inside b
+
+ans:	mkdikr a/b/data
+
+
+5) Change the permission of b to read and write only
+
+->	chmod 666 a/b
+
+
+6)Create directory “data2”  inside b
+
+->mkdir a/b/data2
+
+
+7)Create data.txt file inside b
+
+->touch a/b/data.txt
+
+
+8)Rename the second level directory c to copied_dir
+
+->cd a
+  mv c copied_dir
+
+
+9)Change permission of copied_dir to only executable
+
+->chmod 111 a/copied_dir
+
+
+10)Try ls on copied_dir
+
+->ls a/copied_dir
+
+
 11)permission denied for hidden file,c.txt file
-12)mv a/b/data/ a
-13)sudo chmod
-14)chmod o+rwx a
-15)mkdir sample
-16)mkdir x
-17)mv  x a
-18)mkdir movies
-21)chmod a=rwx a
-25)rm b.txt
+12)Try moving data directory outside of a
+
+->mv a/b/data/ a
+
+
+13)Now change the owner of the directory a to root
+
+-> sudo chown root a
+    password: (Enter root user password)
+   
+
+
+14)hange permission of a to read write and executable to only user
+
+->sudo su
+  chmod 700 a
+
+15)Try creating directory sample inside a
+
+->  sudo su
+    mkdir a/sample
+    exit
+
+16)Create directory x outside a
+
+->  mkdir x
+
+
+17)Try moving x inside a
+
+-> mv  x a
+
+
+18) Create directory movies
+
+->  mkdir movies
+
+
+19) Change group of movies to sudo
+
+-> 	sudo chgrp sudo movies
+
+
+20) Change group of movies to avahi
+
+-> 	sudo addgroup avahi 	=> creating avahi group
+	sudo chgrp avahi movies 
+
+
+21)chmod a=rwx a.txt
+
+22) Try Changing permission after changing group to sudo without sudo
+
+-> 	chmod 777 movies
+
+
+23)Try Changing owner and group both to root
+
+->sudo chown root file.txt
+  sudo chgrp root file.txt
+
+
+24)Try changinging permission 
+
+->sudo su
+ chmod 777 file1.txt
+ exit
+
+25)Try deleting the file
+   
+->rm b.txt
 
 
 
